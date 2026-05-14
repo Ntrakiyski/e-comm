@@ -1,9 +1,9 @@
 "use client";
 
 import { SaleorAuthProvider, useAuthChange } from "@saleor/auth-sdk/react";
-import { invariant } from "ts-invariant";
 import { createSaleorAuthClient } from "@saleor/auth-sdk";
 import { useState, type ReactNode } from "react";
+import { SaleorApiUrl } from "@/app/config";
 import {
 	type Client,
 	Provider as UrqlProvider,
@@ -15,8 +15,7 @@ import {
 import { withRetry } from "@/lib/fetch-retry";
 import { ACCESS_TOKEN_MAX_AGE, REFRESH_TOKEN_MAX_AGE, encodeCookieName } from "./constants";
 
-const saleorApiUrl = process.env.NEXT_PUBLIC_SALEOR_API_URL;
-invariant(saleorApiUrl, "Missing NEXT_PUBLIC_SALEOR_API_URL env variable");
+const saleorApiUrl = SaleorApiUrl;
 
 /**
  * Client-side cookie storage for auth tokens.
@@ -81,8 +80,6 @@ const makeUrqlClient = () => {
 };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-	invariant(saleorApiUrl, "Missing NEXT_PUBLIC_SALEOR_API_URL env variable");
-
 	const [urqlClient, setUrqlClient] = useState<Client>(() => makeUrqlClient());
 	useAuthChange({
 		saleorApiUrl,

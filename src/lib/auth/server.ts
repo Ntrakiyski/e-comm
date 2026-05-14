@@ -2,11 +2,10 @@ import "server-only";
 
 import { createSaleorAuthClient } from "@saleor/auth-sdk";
 import { cookies } from "next/headers";
-import { invariant } from "ts-invariant";
+import { SaleorApiUrl } from "@/app/config";
 import { ACCESS_TOKEN_MAX_AGE, REFRESH_TOKEN_MAX_AGE, encodeCookieName } from "./constants";
 
-const saleorApiUrl = process.env.NEXT_PUBLIC_SALEOR_API_URL;
-invariant(saleorApiUrl, "Missing NEXT_PUBLIC_SALEOR_API_URL env variable");
+const saleorApiUrl = SaleorApiUrl;
 
 /**
  * Server-side cookie storage for auth tokens.

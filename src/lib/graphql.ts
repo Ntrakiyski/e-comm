@@ -1,4 +1,5 @@
 import { type TypedDocumentString } from "../gql/graphql";
+import { SaleorApiUrl } from "@/app/config";
 
 // ============================================================================
 // Result Types - Explicit error handling without exceptions
@@ -213,10 +214,7 @@ async function fetchWithRetry(
 	operationName: string,
 	variablesForLog?: string,
 ): Promise<FetchResult> {
-	const url = process.env.NEXT_PUBLIC_SALEOR_API_URL;
-	if (!url) {
-		return networkError("Missing NEXT_PUBLIC_SALEOR_API_URL env variable");
-	}
+	const url = SaleorApiUrl;
 
 	const { maxRetries, delayMs, timeoutMs } = getRetryConfig();
 
