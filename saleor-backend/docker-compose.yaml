@@ -1,6 +1,12 @@
 services:
   saleor-api:
     image: ghcr.io/saleor/saleor:3.23
+    command:
+      - sh
+      - -c
+      - |
+        export RSA_PRIVATE_KEY="$$(printf "%s" "$${SALEOR_RSA_PRIVATE_KEY_B64}" | base64 -d)"
+        exec uvicorn saleor.asgi:application --host=0.0.0.0 --port=8000 --workers=2 --lifespan=on --ws=none --no-server-header --no-access-log --timeout-keep-alive=35 --timeout-graceful-shutdown=30 --limit-max-requests=10000
     restart: unless-stopped
     depends_on:
       saleor-init:
@@ -8,7 +14,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
-      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
+      - SALEOR_RSA_PRIVATE_KEY_B64=${SALEOR_RSA_PRIVATE_KEY_B64}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
@@ -56,7 +62,12 @@ services:
 
   saleor-worker:
     image: ghcr.io/saleor/saleor:3.23
-    command: celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B
+    command:
+      - sh
+      - -c
+      - |
+        export RSA_PRIVATE_KEY="$$(printf "%s" "$${SALEOR_RSA_PRIVATE_KEY_B64}" | base64 -d)"
+        exec celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B
     restart: unless-stopped
     depends_on:
       saleor-init:
@@ -68,7 +79,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
-      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
+      - SALEOR_RSA_PRIVATE_KEY_B64=${SALEOR_RSA_PRIVATE_KEY_B64}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
@@ -96,7 +107,8 @@ services:
       saleor-mailpit:
         condition: service_started
     command: >
-      sh -c "python3 manage.py migrate &&
+      sh -c "export RSA_PRIVATE_KEY=\"$$(printf '%s' \"$${SALEOR_RSA_PRIVATE_KEY_B64}\" | base64 -d)\" &&
+      python3 manage.py migrate &&
       if [ ! -f /app/media/.saleor_seeded ]; then
         python3 manage.py populatedb --createsuperuser --withoutimages --superuser_password \"$${SALEOR_ADMIN_PASSWORD}\" &&
         touch /app/media/.saleor_seeded;
@@ -104,7 +116,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
-      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
+      - SALEOR_RSA_PRIVATE_KEY_B64=${SALEOR_RSA_PRIVATE_KEY_B64}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
