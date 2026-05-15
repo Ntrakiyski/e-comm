@@ -18,13 +18,13 @@ Deploy this folder as a separate Docker Compose application/resource with base d
 /saleor-backend
 ```
 
-The compose file exposes:
+`docker-compose.yaml` exposes:
 
 - API URL: `http://saleor-api.159.69.35.245.sslip.io`
 - Dashboard URL: `http://saleor-dashboard.159.69.35.245.sslip.io`
 - Mailpit URL: `http://saleor-mailpit.159.69.35.245.sslip.io`
 
-The compose file uses Coolify magic variables to generate:
+`docker-compose.yaml` uses Coolify magic variables to generate:
 
 - Postgres credentials
 - Saleor `SECRET_KEY`
