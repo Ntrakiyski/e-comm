@@ -23,6 +23,7 @@ services:
       - traefik.http.routers.media-services-garage-api.entryPoints=http
       - traefik.http.routers.media-services-garage-api.middlewares=gzip
       - traefik.http.routers.media-services-garage-api.rule=Host(`media-api.159.69.35.245.sslip.io`)
+      - traefik.http.routers.media-services-garage-api.service=media-services-garage-api
       - traefik.http.services.media-services-garage-api.loadbalancer.server.port=3900
     volumes:
       - ./garage.toml:/etc/garage.toml:ro
@@ -54,6 +55,7 @@ services:
       - traefik.http.routers.media-services-imgproxy.entryPoints=http
       - traefik.http.routers.media-services-imgproxy.middlewares=gzip
       - traefik.http.routers.media-services-imgproxy.rule=Host(`img.159.69.35.245.sslip.io`)
+      - traefik.http.routers.media-services-imgproxy.service=media-services-imgproxy
       - traefik.http.services.media-services-imgproxy.loadbalancer.server.port=8080
 
 volumes:

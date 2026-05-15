@@ -2,6 +2,8 @@
 
 Coolify Docker Compose app for product media storage and optimized image delivery.
 
+This stack does not use AWS cloud services. Garage runs inside Coolify and only exposes an S3-compatible API so Saleor, imgproxy, and standard S3 clients can talk to it.
+
 ## Services
 
 - `garage`: S3-compatible object storage using `dxflrs/garage:v2.3.0`
@@ -59,7 +61,7 @@ From inside the Garage container:
 /garage bucket info saleor-media
 ```
 
-From a machine with AWS CLI configured for Garage:
+From a machine with any S3-compatible client pointed at Garage. The example below uses the standard `aws` CLI only as an S3 client; it does not connect to AWS services.
 
 ```sh
 export AWS_ENDPOINT_URL=http://media-api.159.69.35.245.sslip.io
@@ -72,6 +74,8 @@ aws s3 cp /tmp/media-test.txt s3://saleor-media/health/media-test.txt
 aws s3 cp s3://saleor-media/health/media-test.txt /tmp/media-test-download.txt
 diff /tmp/media-test.txt /tmp/media-test-download.txt
 ```
+
+The `AWS_*` names are conventional environment variable names used by S3-compatible clients and libraries. In this deployment they contain Garage credentials, not AWS account credentials.
 
 Generate a signed imgproxy URL:
 
