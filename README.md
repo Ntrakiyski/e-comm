@@ -187,6 +187,8 @@ Open [localhost:3000](http://localhost:3000). That's it.
 
 ## Development
 
+For the deployed Coolify/Saleor/Garage architecture and the workflow future agents should follow, see [Application Architecture](./docs/application-architecture.md).
+
 ### Commands
 
 ```bash

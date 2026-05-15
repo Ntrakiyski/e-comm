@@ -1,0 +1,2733 @@
+{
+  "source": {
+    "type": "saleor-graphql",
+    "url": "https://master.staging.saleor.cloud/graphql/",
+    "channel": "default-channel",
+    "note": "Generated from the repo-configured Saleor demo API because no external source site URL was available in the workspace."
+  },
+  "generatedAt": "2026-05-15T06:10:14.365Z",
+  "productCount": 10,
+  "products": [
+    {
+      "id": "UHJvZHVjdDo3Njc=",
+      "name": "beer with variant to be deleted 1",
+      "slug": "beer-with-variant-to-be-deleted",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MTE=",
+        "name": "Polo Shirts",
+        "slug": "polo-shirts"
+      },
+      "description": "Category: Polo Shirts\nPrice: 13.2 USD\nAttributes: test_ref: ; Cool product: ; ABV: \nVariants: variant 1",
+      "seoTitle": "",
+      "seoDescription": "",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 13.2,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 13.2,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 13.2,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 13.2,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "test_ref",
+            "slug": "test_ref",
+            "values": []
+          },
+          {
+            "name": "Cool product",
+            "slug": "cool-product",
+            "values": []
+          },
+          {
+            "name": "ABV",
+            "slug": "abv",
+            "values": []
+          }
+        ],
+        "variantCount": 1
+      },
+      "attributes": [
+        {
+          "name": "test_ref",
+          "slug": "test_ref",
+          "values": []
+        },
+        {
+          "name": "Cool product",
+          "slug": "cool-product",
+          "values": []
+        },
+        {
+          "name": "ABV",
+          "slug": "abv",
+          "values": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTIzNg==",
+          "name": "variant 1",
+          "sku": null,
+          "quantityAvailable": 0,
+          "attributes": [
+            {
+              "name": "Bottle Size",
+              "slug": "bottle-size",
+              "values": [
+                "2l"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "beer with variant to be deleted 1",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/beer_7da50c3d_thumbnail_256.avif",
+          "localPath": "product-content/images/beer-with-variant-to-be-deleted-1.avif",
+          "contentType": "image/avif",
+          "bytes": 4330
+        },
+        {
+          "alt": "beer with variant to be deleted 1",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/beer_7da50c3d_thumbnail_1024.webp",
+          "localPath": "product-content/images/beer-with-variant-to-be-deleted-2.webp",
+          "contentType": "image/webp",
+          "bytes": 31326
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/beer_7da50c3d_thumbnail_256.avif",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/beer_7da50c3d_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/beer_7da50c3d_thumbnail_4096.avif"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDoxMTU=",
+      "name": "The Blackest Hoodie",
+      "slug": "black-hoodieff",
+      "category": {
+        "id": "Q2F0ZWdvcnk6NTc5",
+        "name": "some 1",
+        "slug": "some-1"
+      },
+      "description": "The Saleor black hoodie",
+      "seoTitle": "fdfsdfssdfsdf",
+      "seoDescription": "Special offer. Buy a hood and get a free jet black sweater attached. Perfect for when you are up to no good. fffsdfsdf",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 123,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 123,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "Numeric",
+            "slug": "numeric",
+            "values": [
+              "11"
+            ]
+          },
+          {
+            "name": "Boolean",
+            "slug": "boolean",
+            "values": [
+              "Boolean: Yes"
+            ]
+          },
+          {
+            "name": "Plain text",
+            "slug": "plain-text",
+            "values": [
+              "fdfsdf"
+            ]
+          },
+          {
+            "name": "Rich text",
+            "slug": "rich-text",
+            "values": [
+              "asd"
+            ]
+          },
+          {
+            "name": "Date",
+            "slug": "date",
+            "values": [
+              "2024-06-27"
+            ]
+          },
+          {
+            "name": "Date time",
+            "slug": "date-time",
+            "values": [
+              "2025-03-12 23:00:00+00:00"
+            ]
+          },
+          {
+            "name": "dropdown",
+            "slug": "dropdown",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "name": "File",
+            "slug": "file",
+            "values": [
+              "Screen_Recording_2025-02-28_at_16.36.08_ca3ae353.mov"
+            ]
+          },
+          {
+            "name": "Reference",
+            "slug": "reference",
+            "values": [
+              "White Plimsolls"
+            ]
+          },
+          {
+            "name": "swatch",
+            "slug": "swatch",
+            "values": [
+              "red"
+            ]
+          },
+          {
+            "name": "Vendor",
+            "slug": "vendor",
+            "values": [
+              "BNP",
+              "brand a",
+              "About",
+              "Apple juice details",
+              "brand juice",
+              "Broken in Shipping",
+              "Customer Dissatisfaction",
+              "Camera extra content",
+              "1 Page with reference",
+              "brand b",
+              "ddd",
+              "No Reason Selected"
+            ]
+          },
+          {
+            "name": "ACP_SIZE",
+            "slug": "acp_size",
+            "values": [
+              "L"
+            ]
+          },
+          {
+            "name": "A rich",
+            "slug": "a-rich",
+            "values": [
+              "The Blackest Hoodie: Engineered for the Void This isn't just black. This is an absence of light. The Blackest Hoodie is an uncompromising piece of apparel, engineered to be the deepest, most saturate…"
+            ]
+          },
+          {
+            "name": "Material",
+            "slug": "material",
+            "values": [
+              "Polyester"
+            ]
+          }
+        ],
+        "variantCount": 5
+      },
+      "attributes": [
+        {
+          "name": "Numeric",
+          "slug": "numeric",
+          "values": [
+            "11"
+          ]
+        },
+        {
+          "name": "Boolean",
+          "slug": "boolean",
+          "values": [
+            "Boolean: Yes"
+          ]
+        },
+        {
+          "name": "Plain text",
+          "slug": "plain-text",
+          "values": [
+            "fdfsdf"
+          ]
+        },
+        {
+          "name": "Rich text",
+          "slug": "rich-text",
+          "values": [
+            "asd"
+          ]
+        },
+        {
+          "name": "Date",
+          "slug": "date",
+          "values": [
+            "2024-06-27"
+          ]
+        },
+        {
+          "name": "Date time",
+          "slug": "date-time",
+          "values": [
+            "2025-03-12 23:00:00+00:00"
+          ]
+        },
+        {
+          "name": "dropdown",
+          "slug": "dropdown",
+          "values": [
+            "S"
+          ]
+        },
+        {
+          "name": "File",
+          "slug": "file",
+          "values": [
+            "Screen_Recording_2025-02-28_at_16.36.08_ca3ae353.mov"
+          ]
+        },
+        {
+          "name": "Reference",
+          "slug": "reference",
+          "values": [
+            "White Plimsolls"
+          ]
+        },
+        {
+          "name": "swatch",
+          "slug": "swatch",
+          "values": [
+            "red"
+          ]
+        },
+        {
+          "name": "Vendor",
+          "slug": "vendor",
+          "values": [
+            "BNP",
+            "brand a",
+            "About",
+            "Apple juice details",
+            "brand juice",
+            "Broken in Shipping",
+            "Customer Dissatisfaction",
+            "Camera extra content",
+            "1 Page with reference",
+            "brand b",
+            "ddd",
+            "No Reason Selected"
+          ]
+        },
+        {
+          "name": "ACP_SIZE",
+          "slug": "acp_size",
+          "values": [
+            "L"
+          ]
+        },
+        {
+          "name": "A rich",
+          "slug": "a-rich",
+          "values": [
+            "The Blackest Hoodie: Engineered for the Void This isn't just black. This is an absence of light. The Blackest Hoodie is an uncompromising piece of apparel, engineered to be the deepest, most saturate…"
+          ]
+        },
+        {
+          "name": "Material",
+          "slug": "material",
+          "values": [
+            "Polyester"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6Mjk5",
+          "name": "XL 2",
+          "sku": "19230637",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": [
+                "2024-07-17"
+              ]
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": [
+                "2025-10-09 00:00:00+02:00"
+              ]
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": [
+                "xxl"
+              ]
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": [
+                "data_(7)_dead02cb.json"
+              ]
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": [
+                "15"
+              ]
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": [
+                "https://asd.com"
+              ]
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": [
+                "zzz"
+              ]
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": [
+                "orange"
+              ]
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": [
+                "black"
+              ]
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": [
+                "5"
+              ]
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "XL"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6Mjk3",
+          "name": "M",
+          "sku": "91406604",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": [
+                "variant boolean: Yes"
+              ]
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": [
+                "2024-07-16"
+              ]
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": [
+                "2024-07-18 22:00:00+00:00"
+              ]
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": [
+                "xxl"
+              ]
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": [
+                "mem-cat_161f64c8.jpg"
+              ]
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": [
+                "1"
+              ]
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": [
+                "zzz"
+              ]
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": [
+                "zzz"
+              ]
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": [
+                "orange"
+              ]
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": [
+                "black"
+              ]
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "S"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MzAw",
+          "name": "XXL",
+          "sku": "61630747",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": [
+                "xd"
+              ]
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "XXL"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6Mjk4",
+          "name": "L",
+          "sku": "22119503",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": [
+                "variant boolean: No"
+              ]
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": [
+                "2024-07-09"
+              ]
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": [
+                "2024-07-21 22:00:00+00:00"
+              ]
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": [
+                "xl"
+              ]
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": [
+                "pedro-monkey-puppet_bc08f8f8.gif"
+              ]
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": [
+                "1"
+              ]
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": [
+                "ASa"
+              ]
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": [
+                "aaa"
+              ]
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": [
+                "pink"
+              ]
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": [
+                "black"
+              ]
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "L"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6Mjk2",
+          "name": "S",
+          "sku": "62783187",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": [
+                "variant boolean: Yes"
+              ]
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": [
+                "2024-07-16"
+              ]
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": [
+                "2024-07-24 22:00:00+00:00"
+              ]
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": [
+                "xxl"
+              ]
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": [
+                "mem-cat_988aff8c.jpg"
+              ]
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": [
+                "0"
+              ]
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": [
+                "ss"
+              ]
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": [
+                "uwu"
+              ]
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": [
+                "orange"
+              ]
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": [
+                "black"
+              ]
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "XL"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "The Blackest Hoodie",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo01_1_thumbnail_256.png",
+          "localPath": "product-content/images/black-hoodieff-1.png",
+          "contentType": "image/png",
+          "bytes": 11654
+        },
+        {
+          "alt": "The Blackest Hoodie",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo01_1_thumbnail_1024.webp",
+          "localPath": "product-content/images/black-hoodieff-2.webp",
+          "contentType": "image/webp",
+          "bytes": 53866
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo01_1_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo01_1_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo01_1_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo3Mw==",
+      "name": "Carrot Juice",
+      "slug": "carrot-juice",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MTQ=",
+        "name": "Juices",
+        "slug": "juices"
+      },
+      "description": "Improve your eyesight the natural way with 100% pure, squeezed carrot juice. The sweet, orange nectar of Mother Earth.",
+      "seoTitle": "",
+      "seoDescription": "Improve your eyesight the natural way with 100% pure, squeezed carrot juice. The sweet, orange nectar of Mother Earth.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 11,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 11,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "DateTimeMTest",
+            "slug": "datetimemtest",
+            "values": [
+              "1992-11-11 11:00:00+01:00"
+            ]
+          },
+          {
+            "name": "Multi",
+            "slug": "multi",
+            "values": []
+          },
+          {
+            "name": "ref-cat",
+            "slug": "ref-cat",
+            "values": []
+          },
+          {
+            "name": "Flavor",
+            "slug": "flavor",
+            "values": [
+              "Carrot"
+            ]
+          },
+          {
+            "name": "Details",
+            "slug": "details",
+            "values": [
+              "Apple juice details"
+            ]
+          },
+          {
+            "name": "Related products",
+            "slug": "related-products",
+            "values": [
+              "Bean Juice",
+              "beer to be updateddf",
+              "beer to be deleted"
+            ]
+          }
+        ],
+        "variantCount": 3
+      },
+      "attributes": [
+        {
+          "name": "DateTimeMTest",
+          "slug": "datetimemtest",
+          "values": [
+            "1992-11-11 11:00:00+01:00"
+          ]
+        },
+        {
+          "name": "Multi",
+          "slug": "multi",
+          "values": []
+        },
+        {
+          "name": "ref-cat",
+          "slug": "ref-cat",
+          "values": []
+        },
+        {
+          "name": "Flavor",
+          "slug": "flavor",
+          "values": [
+            "Carrot"
+          ]
+        },
+        {
+          "name": "Details",
+          "slug": "details",
+          "values": [
+            "Apple juice details"
+          ]
+        },
+        {
+          "name": "Related products",
+          "slug": "related-products",
+          "values": [
+            "Bean Juice",
+            "beer to be updateddf",
+            "beer to be deleted"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjA2",
+          "name": "1l",
+          "sku": "14925419",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "ABV",
+              "slug": "abv",
+              "values": []
+            },
+            {
+              "name": "test1",
+              "slug": "test1",
+              "values": [
+                "one"
+              ]
+            },
+            {
+              "name": "test2",
+              "slug": "test2",
+              "values": [
+                "one"
+              ]
+            },
+            {
+              "name": "Bottle Size",
+              "slug": "bottle-size",
+              "values": [
+                "1l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjA1",
+          "name": "500ml",
+          "sku": "67882967",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "ABV",
+              "slug": "abv",
+              "values": []
+            },
+            {
+              "name": "test1",
+              "slug": "test1",
+              "values": [
+                "one"
+              ]
+            },
+            {
+              "name": "test2",
+              "slug": "test2",
+              "values": [
+                "one"
+              ]
+            },
+            {
+              "name": "Bottle Size",
+              "slug": "bottle-size",
+              "values": [
+                "500ml"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjA3",
+          "name": "2li",
+          "sku": "62426105",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "ABV",
+              "slug": "abv",
+              "values": []
+            },
+            {
+              "name": "test1",
+              "slug": "test1",
+              "values": []
+            },
+            {
+              "name": "test2",
+              "slug": "test2",
+              "values": []
+            },
+            {
+              "name": "Bottle Size",
+              "slug": "bottle-size",
+              "values": [
+                "2l"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Carrot Juice",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_fd_juice_05_thumbnail_256.png",
+          "localPath": "product-content/images/carrot-juice-1.png",
+          "contentType": "image/png",
+          "bytes": 8161
+        },
+        {
+          "alt": "Carrot Juice",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_fd_juice_05_thumbnail_1024.webp",
+          "localPath": "product-content/images/carrot-juice-2.webp",
+          "contentType": "image/webp",
+          "bytes": 45242
+        },
+        {
+          "alt": "Carrot Juice",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/black_53212db4_thumbnail_1024.webp",
+          "localPath": "product-content/images/carrot-juice-3.webp",
+          "contentType": "image/webp",
+          "bytes": 4328
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_fd_juice_05_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_fd_juice_05_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_fd_juice_05_thumbnail_4096.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/black_53212db4_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/black_53212db4_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo4OQ==",
+      "name": "Code Division T-shirt",
+      "slug": "code-division-t-shirt",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MTA=",
+        "name": "T-shirts",
+        "slug": "t-shirts"
+      },
+      "description": "Pay homage to the music and art of a Joy Division and Peter Saville, but with a Mirumee twist. Perfect live transmission apparel for dead souls.",
+      "seoTitle": "",
+      "seoDescription": "Pay homage to the music and art of Joy Division and Peter Saville, but with a Mirumee twist. Perfect live transmission apparel for dead souls.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "Numeric",
+            "slug": "numeric",
+            "values": []
+          },
+          {
+            "name": "Boolean",
+            "slug": "boolean",
+            "values": []
+          },
+          {
+            "name": "Plain text",
+            "slug": "plain-text",
+            "values": []
+          },
+          {
+            "name": "Rich text",
+            "slug": "rich-text",
+            "values": []
+          },
+          {
+            "name": "Date",
+            "slug": "date",
+            "values": []
+          },
+          {
+            "name": "Date time",
+            "slug": "date-time",
+            "values": []
+          },
+          {
+            "name": "dropdown",
+            "slug": "dropdown",
+            "values": []
+          },
+          {
+            "name": "File",
+            "slug": "file",
+            "values": []
+          },
+          {
+            "name": "Reference",
+            "slug": "reference",
+            "values": []
+          },
+          {
+            "name": "swatch",
+            "slug": "swatch",
+            "values": []
+          },
+          {
+            "name": "Vendor",
+            "slug": "vendor",
+            "values": []
+          },
+          {
+            "name": "ACP_SIZE",
+            "slug": "acp_size",
+            "values": []
+          },
+          {
+            "name": "A rich",
+            "slug": "a-rich",
+            "values": []
+          },
+          {
+            "name": "Material",
+            "slug": "material",
+            "values": [
+              "Cotton"
+            ]
+          }
+        ],
+        "variantCount": 5
+      },
+      "attributes": [
+        {
+          "name": "Numeric",
+          "slug": "numeric",
+          "values": []
+        },
+        {
+          "name": "Boolean",
+          "slug": "boolean",
+          "values": []
+        },
+        {
+          "name": "Plain text",
+          "slug": "plain-text",
+          "values": []
+        },
+        {
+          "name": "Rich text",
+          "slug": "rich-text",
+          "values": []
+        },
+        {
+          "name": "Date",
+          "slug": "date",
+          "values": []
+        },
+        {
+          "name": "Date time",
+          "slug": "date-time",
+          "values": []
+        },
+        {
+          "name": "dropdown",
+          "slug": "dropdown",
+          "values": []
+        },
+        {
+          "name": "File",
+          "slug": "file",
+          "values": []
+        },
+        {
+          "name": "Reference",
+          "slug": "reference",
+          "values": []
+        },
+        {
+          "name": "swatch",
+          "slug": "swatch",
+          "values": []
+        },
+        {
+          "name": "Vendor",
+          "slug": "vendor",
+          "values": []
+        },
+        {
+          "name": "ACP_SIZE",
+          "slug": "acp_size",
+          "values": []
+        },
+        {
+          "name": "A rich",
+          "slug": "a-rich",
+          "values": []
+        },
+        {
+          "name": "Material",
+          "slug": "material",
+          "values": [
+            "Cotton"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjUz",
+          "name": "L",
+          "sku": "118223591",
+          "quantityAvailable": 406,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "L"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjU1",
+          "name": "XXL",
+          "sku": "3128223583",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "XXL"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjUy",
+          "name": "M",
+          "sku": "338223582",
+          "quantityAvailable": 339,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "M"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjU0",
+          "name": "XL",
+          "sku": "448323583",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "XL"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MjUx",
+          "name": "S",
+          "sku": "988323583",
+          "quantityAvailable": 543,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "S"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Code Division T-shirt",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_1_thumbnail_256.png",
+          "localPath": "product-content/images/code-division-t-shirt-1.png",
+          "contentType": "image/png",
+          "bytes": 10710
+        },
+        {
+          "alt": "Code Division T-shirt",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_1_thumbnail_1024.webp",
+          "localPath": "product-content/images/code-division-t-shirt-2.webp",
+          "contentType": "image/webp",
+          "bytes": 54280
+        },
+        {
+          "alt": "Code Division T-shirt",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_2_thumbnail_1024.webp",
+          "localPath": "product-content/images/code-division-t-shirt-3.webp",
+          "contentType": "image/webp",
+          "bytes": 26964
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_1_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_1_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_1_thumbnail_4096.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_2_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_boot07_2_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo2NQ==",
+      "name": "Hyperspace Turquoise Paint",
+      "slug": "hyperspace-turquoise-paint",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MjA=",
+        "name": "Paints",
+        "slug": "paints"
+      },
+      "description": "Turquoise is the new black. No more gloomy night skies, brighten up your evenings with hyperspace paint.",
+      "seoTitle": "",
+      "seoDescription": "Turquoise is the new black. No more gloomy night skies, brighten up your evenings with hyperspace paint.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 53.9,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 53.9,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "jk-test-rich",
+            "slug": "jk-test-rich",
+            "values": []
+          }
+        ],
+        "variantCount": 3
+      },
+      "attributes": [
+        {
+          "name": "jk-test-rich",
+          "slug": "jk-test-rich",
+          "values": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTgz",
+          "name": "1l",
+          "sku": "998423582",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "1l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTg0",
+          "name": "2.5l",
+          "sku": "998423583",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "2.5l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTg1",
+          "name": "5l",
+          "sku": "998423585",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "5l"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Hyperspace Turquoise Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_05_thumbnail_256.png",
+          "localPath": "product-content/images/hyperspace-turquoise-paint-1.png",
+          "contentType": "image/png",
+          "bytes": 9212
+        },
+        {
+          "alt": "Hyperspace Turquoise Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_05_thumbnail_1024.webp",
+          "localPath": "product-content/images/hyperspace-turquoise-paint-2.webp",
+          "contentType": "image/webp",
+          "bytes": 54604
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_05_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_05_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_05_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo4NTk=",
+      "name": "jk-gc",
+      "slug": "jk-gc",
+      "category": {
+        "id": "Q2F0ZWdvcnk6OQ==",
+        "name": "Apparel",
+        "slug": "apparel"
+      },
+      "description": "Category: Apparel\nPrice: 5.5 USD\nVariants: UHJvZHVjdFZhcmlhbnQ6MTMyMw==",
+      "seoTitle": "",
+      "seoDescription": "",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 5.5,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [],
+        "variantCount": 1
+      },
+      "attributes": [],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTMyMw==",
+          "name": "UHJvZHVjdFZhcmlhbnQ6MTMyMw==",
+          "sku": null,
+          "quantityAvailable": 700,
+          "attributes": []
+        }
+      ],
+      "images": [
+        {
+          "alt": "jk-gc",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/system-of-a-down-768x396_86a63a7d_thumbnail_1024.webp",
+          "localPath": "product-content/images/jk-gc-2.webp",
+          "contentType": "image/webp",
+          "bytes": 25846
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/system-of-a-down-768x396_86a63a7d_thumbnail_256.jpglollotrollo",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/system-of-a-down-768x396_86a63a7d_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/system-of-a-down-768x396_86a63a7d_thumbnail_4096.jpglollotrollo",
+        "https://master.staging.saleor.cloud/thumbnail/UHJvZHVjdE1lZGlhOjMzNA==/1024/webp/",
+        "https://master.staging.saleor.cloud/thumbnail/UHJvZHVjdE1lZGlhOjMzNA==/4096/"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDoxMjA=",
+      "name": "Lake Tunes",
+      "slug": "lake-tunes",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MjM=",
+        "name": "Audiobooks",
+        "slug": "ebooks"
+      },
+      "description": "Lake Tunes by Digital Audio.",
+      "seoTitle": "",
+      "seoDescription": "",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 10.99,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 10.99,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 10.99,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 10.99,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "Publisher",
+            "slug": "publisher",
+            "values": [
+              "Digital Audio"
+            ]
+          },
+          {
+            "name": "variant file",
+            "slug": "variant-file",
+            "values": []
+          }
+        ],
+        "variantCount": 1
+      },
+      "attributes": [
+        {
+          "name": "Publisher",
+          "slug": "publisher",
+          "values": [
+            "Digital Audio"
+          ]
+        },
+        {
+          "name": "variant file",
+          "slug": "variant-file",
+          "values": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MzE3",
+          "name": "CD / Signed: Yes",
+          "sku": "lake-tunes-cd",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "Medium",
+              "slug": "medium",
+              "values": [
+                "CD"
+              ]
+            },
+            {
+              "name": "Signed",
+              "slug": "signed",
+              "values": [
+                "Signed: Yes"
+              ]
+            },
+            {
+              "name": "Release Date",
+              "slug": "release-date",
+              "values": [
+                "2021-06-03 00:15:00+00:00"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Lake Tunes",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleor-digital-03_2_thumbnail_256.png",
+          "localPath": "product-content/images/lake-tunes-1.png",
+          "contentType": "image/png",
+          "bytes": 14138
+        },
+        {
+          "alt": "Lake Tunes",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleor-digital-03_2_thumbnail_1024.webp",
+          "localPath": "product-content/images/lake-tunes-2.webp",
+          "contentType": "image/webp",
+          "bytes": 80984
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleor-digital-03_2_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleor-digital-03_2_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleor-digital-03_2_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo2NA==",
+      "name": "Light Speed Yellow Paint",
+      "slug": "light-speed-yellow-paint",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MjA=",
+        "name": "Paints",
+        "slug": "paints"
+      },
+      "description": "There is life in outer space. This vibrant light speed yellow paint brings life to any surface. Goes on easy and dries at light speed.",
+      "seoTitle": "",
+      "seoDescription": "There is life in outer space. This vibrant light speed yellow paint brings life to any surface. Goes on easy and dries at light speed.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 53.9,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 53.9,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "jk-test-rich",
+            "slug": "jk-test-rich",
+            "values": []
+          }
+        ],
+        "variantCount": 3
+      },
+      "attributes": [
+        {
+          "name": "jk-test-rich",
+          "slug": "jk-test-rich",
+          "values": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTgw",
+          "name": "1l",
+          "sku": "998323582",
+          "quantityAvailable": 438,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "1l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTgx",
+          "name": "2.5l",
+          "sku": "998323583",
+          "quantityAvailable": 675,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "2.5l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTgy",
+          "name": "5l",
+          "sku": "998323584",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "5l"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Light Speed Yellow Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_04_thumbnail_256.png",
+          "localPath": "product-content/images/light-speed-yellow-paint-1.png",
+          "contentType": "image/png",
+          "bytes": 9666
+        },
+        {
+          "alt": "Light Speed Yellow Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_04_thumbnail_1024.webp",
+          "localPath": "product-content/images/light-speed-yellow-paint-2.webp",
+          "contentType": "image/webp",
+          "bytes": 54448
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_04_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_04_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_04_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDoxMTc=",
+      "name": "Mustard Hoodie",
+      "slug": "mustard-hoodie",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MTI=",
+        "name": "Hoodies",
+        "slug": "hoodies"
+      },
+      "description": "Who dunnit? It was Colonel Mustard, in the dining room, with the lead piping, wearing this hot as mustard hoodie.",
+      "seoTitle": "",
+      "seoDescription": "Who dunnit? It was Colonel Mustard, in the dining room, with the lead piping, wearing this hot as mustard hoodie.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 1.1,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 1.1,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 1.1,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 1.1,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "Numeric",
+            "slug": "numeric",
+            "values": [
+              "1"
+            ]
+          },
+          {
+            "name": "Boolean",
+            "slug": "boolean",
+            "values": [
+              "Boolean: Yes"
+            ]
+          },
+          {
+            "name": "Plain text",
+            "slug": "plain-text",
+            "values": [
+              "plain"
+            ]
+          },
+          {
+            "name": "Rich text",
+            "slug": "rich-text",
+            "values": [
+              "rich"
+            ]
+          },
+          {
+            "name": "Date",
+            "slug": "date",
+            "values": [
+              "2025-03-26"
+            ]
+          },
+          {
+            "name": "Date time",
+            "slug": "date-time",
+            "values": [
+              "2025-03-25 23:00:00+00:00"
+            ]
+          },
+          {
+            "name": "dropdown",
+            "slug": "dropdown",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "name": "File",
+            "slug": "file",
+            "values": [
+              "phoenix_8459154e.png"
+            ]
+          },
+          {
+            "name": "Reference",
+            "slug": "reference",
+            "values": [
+              "White Plimsolls"
+            ]
+          },
+          {
+            "name": "swatch",
+            "slug": "swatch",
+            "values": [
+              "red"
+            ]
+          },
+          {
+            "name": "Vendor",
+            "slug": "vendor",
+            "values": [
+              "Some Vendor "
+            ]
+          },
+          {
+            "name": "ACP_SIZE",
+            "slug": "acp_size",
+            "values": [
+              "L"
+            ]
+          },
+          {
+            "name": "A rich",
+            "slug": "a-rich",
+            "values": []
+          },
+          {
+            "name": "Material",
+            "slug": "material",
+            "values": [
+              "Cotton"
+            ]
+          }
+        ],
+        "variantCount": 1
+      },
+      "attributes": [
+        {
+          "name": "Numeric",
+          "slug": "numeric",
+          "values": [
+            "1"
+          ]
+        },
+        {
+          "name": "Boolean",
+          "slug": "boolean",
+          "values": [
+            "Boolean: Yes"
+          ]
+        },
+        {
+          "name": "Plain text",
+          "slug": "plain-text",
+          "values": [
+            "plain"
+          ]
+        },
+        {
+          "name": "Rich text",
+          "slug": "rich-text",
+          "values": [
+            "rich"
+          ]
+        },
+        {
+          "name": "Date",
+          "slug": "date",
+          "values": [
+            "2025-03-26"
+          ]
+        },
+        {
+          "name": "Date time",
+          "slug": "date-time",
+          "values": [
+            "2025-03-25 23:00:00+00:00"
+          ]
+        },
+        {
+          "name": "dropdown",
+          "slug": "dropdown",
+          "values": [
+            "S"
+          ]
+        },
+        {
+          "name": "File",
+          "slug": "file",
+          "values": [
+            "phoenix_8459154e.png"
+          ]
+        },
+        {
+          "name": "Reference",
+          "slug": "reference",
+          "values": [
+            "White Plimsolls"
+          ]
+        },
+        {
+          "name": "swatch",
+          "slug": "swatch",
+          "values": [
+            "red"
+          ]
+        },
+        {
+          "name": "Vendor",
+          "slug": "vendor",
+          "values": [
+            "Some Vendor "
+          ]
+        },
+        {
+          "name": "ACP_SIZE",
+          "slug": "acp_size",
+          "values": [
+            "L"
+          ]
+        },
+        {
+          "name": "A rich",
+          "slug": "a-rich",
+          "values": []
+        },
+        {
+          "name": "Material",
+          "slug": "material",
+          "values": [
+            "Cotton"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MzA3",
+          "name": "M",
+          "sku": "66846240",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "variant boolean",
+              "slug": "variant-boolean",
+              "values": []
+            },
+            {
+              "name": "variant date",
+              "slug": "variant-date",
+              "values": []
+            },
+            {
+              "name": "variant date time",
+              "slug": "variant-date-time",
+              "values": []
+            },
+            {
+              "name": "variant dropdown",
+              "slug": "variant-dropdown",
+              "values": []
+            },
+            {
+              "name": "variant file",
+              "slug": "variant-file",
+              "values": []
+            },
+            {
+              "name": "variant numeric",
+              "slug": "variant-numeric",
+              "values": []
+            },
+            {
+              "name": "variant plain text",
+              "slug": "variant-plain-text",
+              "values": []
+            },
+            {
+              "name": "variant reference",
+              "slug": "variant-reference",
+              "values": []
+            },
+            {
+              "name": "variant rich text",
+              "slug": "variant-rich-text",
+              "values": []
+            },
+            {
+              "name": "variant select",
+              "slug": "variant-select",
+              "values": []
+            },
+            {
+              "name": "variant swatch",
+              "slug": "variant-swatch",
+              "values": []
+            },
+            {
+              "name": "ACP return window",
+              "slug": "acp-return-window",
+              "values": []
+            },
+            {
+              "name": "Size",
+              "slug": "size",
+              "values": [
+                "M"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Mustard Hoodie",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo03_1_thumbnail_256.png",
+          "localPath": "product-content/images/mustard-hoodie-1.png",
+          "contentType": "image/png",
+          "bytes": 13709
+        },
+        {
+          "alt": "Mustard Hoodie",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo03_1_thumbnail_1024.webp",
+          "localPath": "product-content/images/mustard-hoodie-2.webp",
+          "contentType": "image/webp",
+          "bytes": 62000
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo03_1_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo03_1_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_cl_bogo03_1_thumbnail_4096.png"
+      ]
+    },
+    {
+      "id": "UHJvZHVjdDo2MQ==",
+      "name": "Nebula Night Sky Paint",
+      "slug": "nebula-night-sky-paint",
+      "category": {
+        "id": "Q2F0ZWdvcnk6MjA=",
+        "name": "Paints",
+        "slug": "paints"
+      },
+      "description": "Tonight, my love, let us take fat brushes and paint the skies with the shades of nebula tides. Get the dark, moody shades of the ether.",
+      "seoTitle": "",
+      "seoDescription": "Tonight, my love, let us take fat brushes and paint the skies with the shades of nebula tides. Get the dark, moody shades of the ether.",
+      "pricing": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 110,
+              "currency": "USD"
+            }
+          }
+        }
+      },
+      "details": {
+        "priceRange": {
+          "start": {
+            "gross": {
+              "amount": 16.5,
+              "currency": "USD"
+            }
+          },
+          "stop": {
+            "gross": {
+              "amount": 110,
+              "currency": "USD"
+            }
+          }
+        },
+        "attributes": [
+          {
+            "name": "jk-test-rich",
+            "slug": "jk-test-rich",
+            "values": [
+              "{\"abc\":\"asc\"}"
+            ]
+          }
+        ],
+        "variantCount": 4
+      },
+      "attributes": [
+        {
+          "name": "jk-test-rich",
+          "slug": "jk-test-rich",
+          "values": [
+            "{\"abc\":\"asc\"}"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTcx",
+          "name": "1l",
+          "sku": "546451996",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "1l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTcy",
+          "name": "2.5l",
+          "sku": "546451997",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "2.5l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTcz",
+          "name": "5l",
+          "sku": "546451999",
+          "quantityAvailable": 700,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": []
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "5l"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UHJvZHVjdFZhcmlhbnQ6MTMxNA==",
+          "name": "test-100",
+          "sku": null,
+          "quantityAvailable": 550,
+          "attributes": [
+            {
+              "name": "jk-test-plain",
+              "slug": "jk-test-plain",
+              "values": [
+                "test"
+              ]
+            },
+            {
+              "name": "Bucket Size",
+              "slug": "bucket-size",
+              "values": [
+                "5l"
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Nebula Night Sky Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_01_thumbnail_256.png",
+          "localPath": "product-content/images/nebula-night-sky-paint-1.png",
+          "contentType": "image/png",
+          "bytes": 8554
+        },
+        {
+          "alt": "Nebula Night Sky Paint",
+          "sourceUrl": "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_01_thumbnail_1024.webp",
+          "localPath": "product-content/images/nebula-night-sky-paint-2.webp",
+          "contentType": "image/webp",
+          "bytes": 53150
+        }
+      ],
+      "sourceImages": [
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_01_thumbnail_256.png",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_01_thumbnail_1024.webp",
+        "https://master.staging.saleor.cloud/media/thumbnails/products/saleordemoproduct_paints_01_thumbnail_4096.png"
+      ]
+    }
+  ]
+}
