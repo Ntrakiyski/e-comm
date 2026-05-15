@@ -12,6 +12,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
  */
 export const metadata = rootMetadata;
 
+const isVercelDeployment = process.env.VERCEL === "1";
+
 export default function RootLayout(props: { children: ReactNode }) {
 	const { children } = props;
 
@@ -19,7 +21,7 @@ export default function RootLayout(props: { children: ReactNode }) {
 		<html lang={localeConfig.htmlLang} className={`${GeistSans.variable} ${GeistMono.variable} min-h-dvh`}>
 			<body className="min-h-dvh font-sans">
 				{children}
-				<SpeedInsights />
+				{isVercelDeployment && <SpeedInsights />}
 			</body>
 		</html>
 	);
