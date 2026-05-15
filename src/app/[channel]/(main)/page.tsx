@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { ProductListByCollectionDocument, ProductOrderField, OrderDirection } from "@/gql/graphql";
 import { executePublicGraphQL } from "@/lib/graphql";
 import { CACHE_PROFILES, applyCacheProfile } from "@/lib/cache-manifest";
@@ -79,5 +80,17 @@ async function FeaturedProducts({ params: paramsPromise }: { params: Promise<{ c
 	const { channel } = await paramsPromise;
 	const products = await getFeaturedProducts(channel);
 
-	return <ProductList products={products} />;
+	return (
+		<>
+			<ProductList products={products} />
+			<div className="mt-12 flex justify-center">
+				<Link
+					href={`/${channel}/products`}
+					className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground shadow-xs transition-all duration-200 hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+				>
+					Виж всички продукти
+				</Link>
+			</div>
+		</>
+	);
 }
