@@ -30,6 +30,8 @@ Deploy this folder as a separate Docker Compose application/resource with base d
 - Saleor `SECRET_KEY`
 - Initial admin password
 
+It also needs a runtime-only Coolify env var named `SALEOR_RSA_PRIVATE_KEY` containing a PEM RSA private key for Saleor JWT signing when `DEBUG=False`.
+
 The `saleor-init` service runs migrations and seeds sample data once. The initial admin email is:
 
 ```txt

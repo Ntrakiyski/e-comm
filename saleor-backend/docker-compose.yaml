@@ -8,6 +8,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
@@ -67,6 +68,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
@@ -102,6 +104,7 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - RSA_PRIVATE_KEY=${SALEOR_RSA_PRIVATE_KEY}
       - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
       - CACHE_URL=redis://saleor-cache:6379/0
       - CELERY_BROKER_URL=redis://saleor-cache:6379/1
