@@ -1,0 +1,157 @@
+services:
+  saleor-api:
+    image: ghcr.io/saleor/saleor:3.23
+    restart: unless-stopped
+    depends_on:
+      saleor-init:
+        condition: service_completed_successfully
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
+      - CACHE_URL=redis://saleor-cache:6379/0
+      - CELERY_BROKER_URL=redis://saleor-cache:6379/1
+      - DEFAULT_CHANNEL_SLUG=default-channel
+      - HTTP_IP_FILTER_ENABLED=False
+      - PUBLIC_URL=http://saleor-api.159.69.35.245.sslip.io
+      - ALLOWED_HOSTS=saleor-api.159.69.35.245.sslip.io,saleor-api,localhost,127.0.0.1
+      - ALLOWED_CLIENT_HOSTS=*
+      - ALLOWED_GRAPHQL_ORIGINS=*
+      - DASHBOARD_URL=http://saleor-dashboard.159.69.35.245.sslip.io
+      - DEFAULT_FROM_EMAIL=noreply@example.com
+      - EMAIL_URL=smtp://saleor-mailpit:1025
+      - OTEL_TRACES_EXPORTER=none
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.routers.saleor-backend-api.entryPoints=http
+      - traefik.http.routers.saleor-backend-api.middlewares=gzip
+      - traefik.http.routers.saleor-backend-api.rule=Host(`saleor-api.159.69.35.245.sslip.io`)
+      - traefik.http.services.saleor-backend-api.loadbalancer.server.port=8000
+    volumes:
+      - saleor-media:/app/media
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  saleor-dashboard:
+    image: ghcr.io/saleor/saleor-dashboard:3.23
+    restart: unless-stopped
+    depends_on:
+      saleor-api:
+        condition: service_started
+    environment:
+      - API_URL=http://saleor-api.159.69.35.245.sslip.io/graphql/
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.routers.saleor-backend-dashboard.entryPoints=http
+      - traefik.http.routers.saleor-backend-dashboard.middlewares=gzip
+      - traefik.http.routers.saleor-backend-dashboard.rule=Host(`saleor-dashboard.159.69.35.245.sslip.io`)
+      - traefik.http.services.saleor-backend-dashboard.loadbalancer.server.port=80
+
+  saleor-worker:
+    image: ghcr.io/saleor/saleor:3.23
+    command: celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B
+    restart: unless-stopped
+    depends_on:
+      saleor-init:
+        condition: service_completed_successfully
+      saleor-cache:
+        condition: service_started
+      saleor-mailpit:
+        condition: service_started
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
+      - CACHE_URL=redis://saleor-cache:6379/0
+      - CELERY_BROKER_URL=redis://saleor-cache:6379/1
+      - DEFAULT_CHANNEL_SLUG=default-channel
+      - HTTP_IP_FILTER_ENABLED=False
+      - PUBLIC_URL=http://saleor-api.159.69.35.245.sslip.io
+      - ALLOWED_HOSTS=saleor-api.159.69.35.245.sslip.io,saleor-worker,localhost,127.0.0.1
+      - ALLOWED_CLIENT_HOSTS=*
+      - ALLOWED_GRAPHQL_ORIGINS=*
+      - DASHBOARD_URL=http://saleor-dashboard.159.69.35.245.sslip.io
+      - DEFAULT_FROM_EMAIL=noreply@example.com
+      - EMAIL_URL=smtp://saleor-mailpit:1025
+      - OTEL_TRACES_EXPORTER=none
+    volumes:
+      - saleor-media:/app/media
+
+  saleor-init:
+    image: ghcr.io/saleor/saleor:3.23
+    restart: "no"
+    depends_on:
+      saleor-db:
+        condition: service_healthy
+      saleor-cache:
+        condition: service_started
+      saleor-mailpit:
+        condition: service_started
+    command: >
+      sh -c "python3 manage.py migrate &&
+      if [ ! -f /app/media/.saleor_seeded ]; then
+        python3 manage.py populatedb --createsuperuser --withoutimages --superuser_password \"$${SALEOR_ADMIN_PASSWORD}\" &&
+        touch /app/media/.saleor_seeded;
+      fi"
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=${SERVICE_BASE64_64_SALEOR_SECRET}
+      - DATABASE_URL=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@saleor-db:5432/saleor
+      - CACHE_URL=redis://saleor-cache:6379/0
+      - CELERY_BROKER_URL=redis://saleor-cache:6379/1
+      - DEFAULT_CHANNEL_SLUG=default-channel
+      - HTTP_IP_FILTER_ENABLED=False
+      - PUBLIC_URL=http://saleor-api.159.69.35.245.sslip.io
+      - ALLOWED_HOSTS=saleor-api.159.69.35.245.sslip.io,saleor-init,localhost,127.0.0.1
+      - ALLOWED_CLIENT_HOSTS=*
+      - ALLOWED_GRAPHQL_ORIGINS=*
+      - DASHBOARD_URL=http://saleor-dashboard.159.69.35.245.sslip.io
+      - DEFAULT_FROM_EMAIL=noreply@example.com
+      - EMAIL_URL=smtp://saleor-mailpit:1025
+      - OTEL_TRACES_EXPORTER=none
+      - SALEOR_ADMIN_PASSWORD=${SERVICE_PASSWORD_ADMIN}
+    volumes:
+      - saleor-media:/app/media
+
+  saleor-db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=saleor
+      - POSTGRES_USER=${SERVICE_USER_POSTGRES}
+      - POSTGRES_PASSWORD=${SERVICE_PASSWORD_POSTGRES}
+    volumes:
+      - saleor-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  saleor-cache:
+    image: valkey/valkey:8.1-alpine
+    restart: unless-stopped
+    volumes:
+      - saleor-cache:/data
+
+  saleor-mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.routers.saleor-backend-mailpit.entryPoints=http
+      - traefik.http.routers.saleor-backend-mailpit.middlewares=gzip
+      - traefik.http.routers.saleor-backend-mailpit.rule=Host(`saleor-mailpit.159.69.35.245.sslip.io`)
+      - traefik.http.services.saleor-backend-mailpit.loadbalancer.server.port=8025
+
+volumes:
+  saleor-db:
+  saleor-cache:
+  saleor-media:
