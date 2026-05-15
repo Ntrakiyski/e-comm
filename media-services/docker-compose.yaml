@@ -1,0 +1,61 @@
+services:
+  garage:
+    image: dxflrs/garage:v2.3.0
+    command: ["/garage", "server", "--single-node", "--default-bucket"]
+    restart: unless-stopped
+    environment:
+      GARAGE_CONFIG_FILE: /etc/garage.toml
+      GARAGE_DEFAULT_ACCESS_KEY: ${GARAGE_DEFAULT_ACCESS_KEY}
+      GARAGE_DEFAULT_SECRET_KEY: ${GARAGE_DEFAULT_SECRET_KEY}
+      GARAGE_DEFAULT_BUCKET: ${GARAGE_DEFAULT_BUCKET:-saleor-media}
+      GARAGE_RPC_SECRET: ${GARAGE_RPC_SECRET}
+      GARAGE_ADMIN_TOKEN: ${GARAGE_ADMIN_TOKEN}
+      GARAGE_METRICS_TOKEN: ${GARAGE_METRICS_TOKEN}
+      RUST_LOG: ${GARAGE_RUST_LOG:-garage=info}
+    expose:
+      - "3900"
+      - "3901"
+      - "3902"
+      - "3903"
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.routers.media-services-garage-api.entryPoints=http
+      - traefik.http.routers.media-services-garage-api.middlewares=gzip
+      - traefik.http.routers.media-services-garage-api.rule=Host(`media-api.159.69.35.245.sslip.io`)
+      - traefik.http.services.media-services-garage-api.loadbalancer.server.port=3900
+    volumes:
+      - ./garage.toml:/etc/garage.toml:ro
+      - garage-meta:/var/lib/garage/meta
+      - garage-data:/var/lib/garage/data
+
+  imgproxy:
+    image: ghcr.io/imgproxy/imgproxy:latest
+    restart: unless-stopped
+    depends_on:
+      - garage
+    environment:
+      IMGPROXY_BIND: ":8080"
+      IMGPROXY_USE_S3: "true"
+      IMGPROXY_S3_REGION: garage
+      IMGPROXY_S3_ENDPOINT: http://garage:3900
+      IMGPROXY_S3_ENDPOINT_USE_PATH_STYLE: "true"
+      IMGPROXY_ALLOWED_SOURCES: ${IMGPROXY_ALLOWED_SOURCES:-s3://saleor-media/}
+      IMGPROXY_KEY: ${IMGPROXY_KEY}
+      IMGPROXY_SALT: ${IMGPROXY_SALT}
+      AWS_ACCESS_KEY_ID: ${GARAGE_DEFAULT_ACCESS_KEY}
+      AWS_SECRET_ACCESS_KEY: ${GARAGE_DEFAULT_SECRET_KEY}
+      AWS_REGION: garage
+    expose:
+      - "8080"
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.routers.media-services-imgproxy.entryPoints=http
+      - traefik.http.routers.media-services-imgproxy.middlewares=gzip
+      - traefik.http.routers.media-services-imgproxy.rule=Host(`img.159.69.35.245.sslip.io`)
+      - traefik.http.services.media-services-imgproxy.loadbalancer.server.port=8080
+
+volumes:
+  garage-meta:
+  garage-data:
