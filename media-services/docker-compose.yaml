@@ -1,6 +1,8 @@
 services:
   garage:
-    image: dxflrs/garage:v2.3.0
+    build:
+      context: .
+      dockerfile: Dockerfile.garage
     command: ["/garage", "server", "--single-node", "--default-bucket"]
     restart: unless-stopped
     environment:
@@ -26,7 +28,6 @@ services:
       - traefik.http.routers.media-services-garage-api.service=media-services-garage-api
       - traefik.http.services.media-services-garage-api.loadbalancer.server.port=3900
     volumes:
-      - ./garage.toml:/etc/garage.toml:ro
       - garage-meta:/var/lib/garage/meta
       - garage-data:/var/lib/garage/data
 

@@ -6,10 +6,12 @@ This stack does not use AWS cloud services. Garage runs inside Coolify and only 
 
 ## Services
 
-- `garage`: S3-compatible object storage using `dxflrs/garage:v2.3.0`
+- `garage`: S3-compatible object storage built from `dxflrs/garage:v2.3.0`
 - `imgproxy`: optimized public image delivery using `ghcr.io/imgproxy/imgproxy:latest`
 
 Garage runs in single-node mode for this initial deployment. It persists metadata in `garage-meta` mounted at `/var/lib/garage/meta` and object data in `garage-data` mounted at `/var/lib/garage/data`.
+
+The Garage config is baked into the service image from `Dockerfile.garage` so the Coolify runtime does not depend on a sibling config-file bind mount.
 
 ## Coolify
 
