@@ -28,6 +28,13 @@ services:
       - DEFAULT_FROM_EMAIL=noreply@example.com
       - EMAIL_URL=smtp://saleor-mailpit:1025
       - OTEL_TRACES_EXPORTER=none
+      # S3-compatible Garage storage. The AWS_* names are the env names expected by Saleor/django-storages.
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_MEDIA_BUCKET_NAME=${AWS_MEDIA_BUCKET_NAME}
+      - AWS_S3_ENDPOINT_URL=${AWS_S3_ENDPOINT_URL}
+      - AWS_S3_REGION_NAME=${AWS_S3_REGION_NAME}
+      - AWS_QUERYSTRING_AUTH=${AWS_QUERYSTRING_AUTH:-True}
     labels:
       - traefik.enable=true
       - traefik.http.middlewares.gzip.compress=true
@@ -93,6 +100,13 @@ services:
       - DEFAULT_FROM_EMAIL=noreply@example.com
       - EMAIL_URL=smtp://saleor-mailpit:1025
       - OTEL_TRACES_EXPORTER=none
+      # S3-compatible Garage storage. The AWS_* names are the env names expected by Saleor/django-storages.
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_MEDIA_BUCKET_NAME=${AWS_MEDIA_BUCKET_NAME}
+      - AWS_S3_ENDPOINT_URL=${AWS_S3_ENDPOINT_URL}
+      - AWS_S3_REGION_NAME=${AWS_S3_REGION_NAME}
+      - AWS_QUERYSTRING_AUTH=${AWS_QUERYSTRING_AUTH:-True}
     volumes:
       - saleor-media:/app/media
 
@@ -130,6 +144,13 @@ services:
       - DEFAULT_FROM_EMAIL=noreply@example.com
       - EMAIL_URL=smtp://saleor-mailpit:1025
       - OTEL_TRACES_EXPORTER=none
+      # S3-compatible Garage storage. The AWS_* names are the env names expected by Saleor/django-storages.
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_MEDIA_BUCKET_NAME=${AWS_MEDIA_BUCKET_NAME}
+      - AWS_S3_ENDPOINT_URL=${AWS_S3_ENDPOINT_URL}
+      - AWS_S3_REGION_NAME=${AWS_S3_REGION_NAME}
+      - AWS_QUERYSTRING_AUTH=${AWS_QUERYSTRING_AUTH:-True}
       - SALEOR_ADMIN_PASSWORD=${SERVICE_PASSWORD_ADMIN}
     volumes:
       - saleor-media:/app/media

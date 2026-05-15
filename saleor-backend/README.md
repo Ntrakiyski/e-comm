@@ -32,6 +32,17 @@ Deploy this folder as a separate Docker Compose application/resource with base d
 
 It also needs a runtime-only Coolify env var named `SALEOR_RSA_PRIVATE_KEY_B64` containing a base64-encoded PEM RSA private key for Saleor JWT signing when `DEBUG=False`.
 
+For product media, this stack can use the separate `media-services` Garage deployment through its S3-compatible API. The `AWS_*` environment variable names are Saleor/django-storages conventions only; in this project they point at Garage running in Coolify, not AWS cloud services.
+
+Required media env vars:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_MEDIA_BUCKET_NAME`
+- `AWS_S3_ENDPOINT_URL`
+- `AWS_S3_REGION_NAME`
+- `AWS_QUERYSTRING_AUTH`
+
 The `saleor-init` service runs migrations and seeds sample data once. The initial admin email is:
 
 ```txt
